@@ -48,9 +48,9 @@ include('config.php');
 												<td><?= $data['pb_umku'] ?></td>
 												<td><?= $data['nama_pelaku_usaha'] ?></td>
 												<td><?= $data['nib'] ?></td>
-												<td><?= $data['alamat_kantor']?>, <?=  $data['kd_pos_kantor'] ?></td>
+												<td><?= $data['alamat_kantor'] ?>, <?= $data['kd_pos_kantor'] ?></td>
 												<td><?= $data['status'] ?></td>
-												<td><?= $data['lokasi_usaha'] ?>, <?=  $data['kd_pos_usaha'] ?></td>
+												<td><?= $data['lokasi_usaha'] ?>, <?= $data['kd_pos_usaha'] ?></td>
 												<th>
 													<a href="cetak.php?page=print&id=<?= $data['id'] ?>" class="btn btn-circle btn-success btn-sm" target="_blank">Cetak</a>
 												</th>

@@ -7,8 +7,4 @@ switch ($queries['page']) {
         # code...
         include 'print.php';
         break;
-    default:
-        #code...
-        include 'home.php';
-        break;
 }

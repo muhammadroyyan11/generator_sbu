@@ -190,7 +190,9 @@ function tgl_indo($tanggal)
         </tr>
         <tr>
             <td style="font-size: 9pt; font-family: Arial; width: 57%;"></td>
-            <th style="font-size: 9pt; font-family: Arial; width: 58%;"><img src="img/barcode.png" alt="" style="max-width: 50px;"></th>
+            <th style="font-size: 9pt; font-family: Arial; width: 58%;">
+                <img src="img/<?= $data['qr_code']?>" alt=""  style="height: 60px; weight: 60px">
+            </th>
         </tr>
         <tr>
             <td style="font-size: 9pt; font-family: Arial; width: 57%;"></td>
@@ -203,7 +205,7 @@ function tgl_indo($tanggal)
         </tr>
     </table>
 
-    <br></br><br><br><br>
+    <br></br><br><br><br><br>
     <table style="width:90%;  border: 1px solid;">
         <tr>
             <td style=" font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;</td>
