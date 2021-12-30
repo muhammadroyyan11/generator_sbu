@@ -69,6 +69,22 @@
             # code...
             include 'tambah.php';
             break;
+        case 'addKlasifikasi':
+            # code...
+            include 'tambah_kualifikasi.php';
+            break;
+        case 'prosesAddKlasifikasi':
+            # code...
+            include 'prosesAddKlasifikasi.php';
+            break;
+        case 'addPemenuhan':
+            # code...
+            include 'tambah_pemenuhan.php';
+            break;
+        case 'prosesAddPemenuhan':
+            # code...
+            include 'prosesAddPemenuhan.php';
+            break;
         case 'print':
             # code...
             include 'tes.php';

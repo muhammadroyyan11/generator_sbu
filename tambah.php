@@ -16,7 +16,7 @@
 							<div class="col-12">
 								<div class="form-group">
 									<label for="largeInput">PB-UMKU</label>
-									<input id="pb_umku" name="pb_umku" class="form-control form-control-lg" type="number" placeholder="Masukkan PB-UMKU" />
+									<input id="pb_umku" name="pb_umku" class="form-control form-control-lg" type="number" placeholder="Masukkan PB-UMKU" value="085649888272" />
 								</div>
 								<div class="form-group">
 									<label for="defaultInput">Nama Pelaku Usaha</label>

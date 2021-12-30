@@ -5,10 +5,10 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 switch ($queries['page']) {
     case 'print':
         # code...
-        include 'tes.php';
+        include 'print.php';
         break;
     case 'print2':
         # code...
-        include 'print.php';
+        include 'printBackup.php';
         break;
 }

@@ -1,6 +1,8 @@
 <?php
 //memasukkan file config.php
 include('config.php');
+include('get_id.php');
+
 ?>
 
 <!-- Zero configuration table -->
@@ -11,7 +13,7 @@ include('config.php');
                 <div class="card-header">
                     <h4 class="card-title">Kualifikasi Subklasifikasi</h4>
                     <div class="pull-right">
-                        <a href="index.php?page=tambah_data" class="btn btn-primary btn-flat">
+                        <a href="index.php?page=addKlasifikasi&id=<?= $data['id'] ?>" class="btn btn-primary btn-flat">
                             <i class="fa fa-files-plus"></i> Tambah Data
                         </a>
                     </div>
@@ -29,7 +31,6 @@ include('config.php');
                                         <th>KBLI</th>
                                         <th>Subklasifikasi</th>
                                         <th>Nama PJSKBU</th>
-                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -44,7 +45,7 @@ include('config.php');
                                         while ($ks = mysqli_fetch_assoc($sql)) {
                                             // var_dump($ks);
                                             //jika sudah mendapatkan parameter GET id dari URL
-                                            include('get_id.php');
+                                            // include('get_id.php');
                                             // var_dump($ks);
                                             if ($data['id'] == $ks['id_surat']) { ?>
 
@@ -56,11 +57,7 @@ include('config.php');
                                                     <td><?= $ks['klbi'] ?></td>
                                                     <td><?= $ks['subklasifikasi'] ?></td>
                                                     <td><?= $ks['nama_pjskbu'] ?><br><?= $ks['no_nama_pjskbu'] ?></td>
-                                                    <td>
-                                                        <a href="cetak.php?page=print&id=<?= $ks['id'] ?>" class="btn btn-circle btn-success btn-sm" target="_blank">Cetak</a>
-                                                        <hr>
-                                                        <a href="index.php?page=lampiran&id=<?= $ks['id'] ?>" class="btn btn-circle btn-danger btn-sm" target="_blank">Cetak</a>
-                                                    </td>
+                                                   
                                                 </tr>
                                         <?php
                                                 $no++;
@@ -94,7 +91,7 @@ include('config.php');
                 <div class="card-header">
                     <h4 class="card-title">Lampiran Pemenuhan Komitmen</h4>
                     <div class="pull-right">
-                        <a href="index.php?page=tambah_data" class="btn btn-primary btn-flat">
+                        <a href="index.php?page=addPemenuhan&id=<?= $data['id'] ?>" class="btn btn-primary btn-flat">
                             <i class="fa fa-files-plus"></i> Tambah Data
                         </a>
                     </div>
