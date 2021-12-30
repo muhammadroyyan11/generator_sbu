@@ -71,7 +71,11 @@
             break;
         case 'print':
             # code...
-            include 'print.php';
+            include 'tes.php';
+            break;
+        case 'lampiran':
+            # code...
+            include 'lampiran_view.php';
             break;
         case 'edit_mhs_save':
             # code...

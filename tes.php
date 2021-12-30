@@ -24,7 +24,6 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 
@@ -33,33 +32,28 @@ if (isset($_GET['id'])) {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin-top: 35px;
     }
 
-    table,
     th,
-    p,
     td {
-        border: 1px solid;
+
         border-collapse: collapse;
-
     }
 
-    .fivesolidblue {
-        /* display: flex; */
-        /* border: 0.5px solid #6d9eed; */
-        /* border-radius: 115em; */
+    .textCenter {
+        text-align: center;
+    }
+
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .borderTable {
+        border: 1px solid black;
         border-collapse: collapse;
-        border-radius: 25px;
-        border: 1px solid #6d9eed;
-        padding: 20px;
-    }
-
-    .fivedottedbrown {
-        border: 5px dotted brown;
-    }
-
-    .fivedashedblue {
-        border: 5px dashed red;
     }
 </style>
 
@@ -67,15 +61,14 @@ if (isset($_GET['id'])) {
     <title>PB UMKU-<?= $data['nama_pelaku_usaha'] ?></title>
 </head>
 
-<body>
 
+<body>
 
     <table style="width:90%; height: 100px;">
         <tr>
-            <th><img src="img/garuda1.png" alt="" style="max-width: 85px; margin-top: 30px;"></th>
+            <th><img src="img/garuda1.png" alt="" style="max-width: 80px; margin-top: 35px;"></th>
         </tr>
     </table>
-    <br>
     <table style="width:90%; height: 50px;">
         <tr>
             <th style="font-family: Arial; font-size: 13.5pt;">PEMERINTAH REPUBLIK INDONESIA</th>
@@ -134,7 +127,7 @@ if (isset($_GET['id'])) {
         </tr>
         <tr>
             <td style=" font-size: 9pt; font-family: Arial; width: 1%; " valign="top ">5.</td>
-            <td style="font-size: 9pt; font-family: Arial; width: 43%;">Kode Klasifikasi Baku Lapangan Usaha Indonesia (KBLI)
+            <td style="font-size: 9pt; font-family: Arial; width: 43%;" align="justify">Kode Klasifikasi Baku Lapangan Usaha&nbsp; Indonesia (KBLI)
             </td>
             <td style="width: 1px; font-size: 9pt; font-family: Arial;" valign="top">:</td>
             <td style="font-size: 9pt; font-family: Arial; width: 58%;" valign="top"><?= $data['klbi'] ?></td>
@@ -175,9 +168,9 @@ if (isset($_GET['id'])) {
             <td style="font-size: 9pt; font-family: Arial; " align="justify ">Lampiran Perizinan Berusaha Untuk Menunjang Kegiatan Usaha ini memuat data teknis yang merupakan bagian tidak terpisahkan dari dokumen ini. Pelaku Usaha tersebut di atas wajib menjalankan kegiatan usahanya sesuai dengan ketentuan perundang-undangan
                 yang berlaku.</td>
         </tr>
-    </table> 
-    <table style="width:90%;">
-        <tr style="height:40px ">
+    </table>
+    <table style="width:90%; margin-top: 15px;">
+        <tr>
             <td style="font-size: 9pt; font-family: Arial; " align="justify ">Diterbitkan tanggal: <?= tgl_indo($data['date']); ?></td>
         </tr>
     </table>
@@ -200,15 +193,15 @@ if (isset($_GET['id'])) {
         </tr>
     </table>
     <table style="width:90%;">
-        <tr style="height:40px ">
+        <tr>
             <td style="font-size: 9pt; font-family: Arial; " align="justify ">Dicetak tanggal: <?= tgl_indo(date('Y-m-d')); ?></td>
         </tr>
     </table>
 
     <br></br><br><br><br>
-    <table style="width:90%;  border: 1px solid;">
+    <table style="width:93%;  border: 1px solid;">
         <tr>
-            <td style=" font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;</td>
+            <td style="font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;</td>
             <td style="width: 1px; font-size: 6.5pt; font-family: Arial; font-style: italic;" valign="top ">&nbsp;</td>
             <td rowspan="6" style="width: 1px; font-size: 9pt; font-family: Arial;" valign="top "><img src="img/footer.png" alt="" style="max-width: 140px;"></td>
         </tr>
@@ -235,15 +228,27 @@ if (isset($_GET['id'])) {
         </tr>
     </table>
 
+    <!-- <script>
+        window.print();
+    </script> -->
+</body>
+
+<body>
+
     <table style="width:90%; height: 100px;">
         <tr>
-            <th><img src="img/garuda1.png" alt="" style="max-width: 85px; margin-top: 80px;"></th>
+            <th><img src="img/garuda1.png" alt="" style="max-width: 85px; margin-top: 35px;"></th>
         </tr>
     </table>
     <br>
     <table style="width:90%; height: 50px;">
         <tr>
             <th style="font-family: Arial; font-size: 13.5pt;">PEMERINTAH REPUBLIK INDONESIA</th>
+        </tr>
+
+
+    </table>
+    <table style="width:90%; height: 50px;">
         <tr>
             <th style="font-family: Arial; font-size: 13.5pt;">PERIZINAN BERUSAHA UNTUK MENUNJANG KEGIATAN USAHA</th>
         </tr>
@@ -256,97 +261,192 @@ if (isset($_GET['id'])) {
         <tr>
             <th style="font-family: Arial; font-size: 13.5pt;">PB-UMKU: <?= $data['pb_umku'] ?></th>
         </tr>
-        </tr>
-    </table><br>
+    </table>
+
     <table style="width:90%">
         <tr style="height:40px">
-            <td style="font-size: 11pt; font-family: Calibri;" align="justify">Lampiran berikut memuat data teknis Lisensi Sertifikat Badan Usaha (SBU) konstruksi <?= $data['nama_pelaku_usaha'] ?> sebagai berikut:</td>
-        </tr>
-    </table>
-    <table class="fivesolidblue" style="width:90%; height: 50px;">
-        <tr>
-            <td valign="top ">&nbsp;</td>
-        </tr>
-        <tr>
-            <th style="font-family: Arial; font-size: 13.5pt;">PEMERINTAH REPUBLIK INDONESIA</th>
-        <tr>
-        <tr>
-            <td>
-                <table style="width:90%; margin-right:60px; margin-left:40px;">
-                    <thead border:1px solid;>
-                        <tr style="border:1px solid;">
-
-                            <th style="border:1px solid;">tEs</th>
-                            <th style="border:1px solid;">Tes</th>
-                        </tr>
-
-                    </thead>
-                    <tbody style="border:1px solid;">
-                        <tr style="border:1px solid;">
-                            <td style="border:1px solid;">TESS</td>
-                            <td style="border:1px solid;">tes</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </td>
-        </tr>
-        <tr>
-            <td>tes</td>
-        </tr>
-        <tr>
-            <td>
-                <table style="width:90%; margin-right:50px; margin-left:30px;">
-                    <thead border:1px solid;>
-                        <tr style="border:1px solid;">
-                            <th style="border:1px solid;">tEs</th>
-                            <th style="border:1px solid;">Tes</th>
-                        </tr>
-
-                    </thead>
-                    <tbody style="border:1px solid;">
-                        <tr style="border:1px solid;">
-                            <td style="border:1px solid;">TESS</td>
-                            <td style="border:1px solid;">tes</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <td style="font-size: 9pt; font-family: Arial;" align="justify">Lampiran berikut memuat data teknis Lisensi Sertifikat Badan Usaha (SBU) konstruksi <?= $data['nama_pelaku_usaha'] ?> sebagai berikut:
             </td>
         </tr>
     </table>
-    <table style="width:100%;  border: 1px solid;">
-        <tr>
-            <td style=" font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;</td>
+    <div style="width:90%;  border: 1px solid #3b7dbf; margin-top: 1px; margin-bottom: 5px;">
+        <!-- <b><p class="textCenter" style="font-family: Arial; font-size: 12pt;">Rincian Kualifikasi dab Subklasifikasi</p></b> -->
+        <table class="center" style="width:90%; margin-bottom:10px;">
+            <tr>
+                <td valign="top ">&nbsp;</td>
+            </tr>
+            <tr>
+                <th style="font-family: Arial; font-size: 11pt;">Rincian Kualifiksi dan Subklasifikasi</th>
+            <tr>
+        </table>
+        <table style="width:88%;" class="center borderTable">
+            <thead>
+                <tr class="borderTable" style="height: 20px;">
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 5%;">No</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 15%;">Kualifikasi</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 12%;">Kode Subkla</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 10%;">Sifat</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 11%;">KBLI</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 17%;">Subklasifikasi</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 60%;">Nama PJSKBU</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                //query ke database SELECT tabel mahasiswa urut berdasarkan id yang paling besar
+                $sql = mysqli_query($koneksi, "SELECT * FROM kualifikasi_subklasifikasi ORDER BY id_ks DESC") or die(mysqli_error($koneksi));
+                //jika query diatas menghasilkan nilai > 0 maka menjalankan script di bawah if...
+                if (mysqli_num_rows($sql) > 0) {
+                    //membuat variabel $no untuk menyimpan nomor urut
+                    $no = 1;
+                    //melakukan perulangan while dengan dari dari query $sql
+                    while ($ks = mysqli_fetch_assoc($sql)) {
+                        // var_dump($ks);
+                        //jika sudah mendapatkan parameter GET id dari URL
+                        include('get_id.php');
+                        // var_dump($ks);
+                        if ($data['id'] == $ks['id_surat']) { ?>
+                            <tr class="textCenter borderTable" style="height: 70px;">
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 5%;"><?= $no ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 15%;"><?= $ks['kualifikasi'] ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 12%;"><?= $ks['kd_subkla'] ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 10%;"><?= $ks['sifat'] ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 11%;"><?= $ks['klbi'] ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 17%;"><?= $ks['subklasifikasi'] ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 60%;"><?= $ks['nama_pjskbu'] ?><br><?= $ks['no_nama_pjskbu'] ?></td>
+                            </tr>
+                            <tr class="borderTable">
+                                <td class="borderTable" colspan="7" style="font-size: 9pt; font-family: Arial; height: 20px;">Pemenuhan kewajiban penyediaan peralatan konstruksi : <?= $ks['pemenuhan_kewajiban'] ?></td>
+                            </tr>
+                            <tr class="borderTable">
+                                <td class="borderTable" colspan="7" style="font-size: 9pt; font-family: Arial; height: 20px;">Pelaksana sertifikasi : Gamana Krida Bhakti (GAPENSI)</td>
+                            </tr>
+                    <?php
+                            $no++;
+                        }
+                    }
+                    //jika query menghasilkan nilai 0
+                } else { ?>
+                    <tr class="textCenter borderTable">
+                        <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 2%;" colspan="6">Tidak ada data.</td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+        <table class="center" style="width:90%; margin-bottom:10px;">
+            <tr>
+                <td valign="top ">&nbsp;</td>
+            </tr>
+            <tr>
+                <th style="font-family: Arial; font-size: 11pt;">Pemenuhan Komitmen</th>
+            <tr>
+            <tr>
+                <th style="font-family: Arial; font-size: 11pt;">(Kewajiban sesuai ketentuan PP Nomor 5 Tahun 2021 dan PP Nomor 14</th>
+            <tr>
+            <tr>
+                <th style="font-family: Arial; font-size: 11pt;">Tahun 2021)</th>
+            <tr>
+        </table>
+        <table style="width:88%;" class="center borderTable">
+            <thead>
+                <tr class="borderTable">
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 2%;">No</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 24%;">Kewajiban Perizinan Berusaha</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 6%;">Pemenuhan Kewajiban</th>
+                    <th class="borderTable" style="font-size: 9pt; font-family: Arial; width: 6%;">Keterangan</th>
+                </tr>
+            </thead>
+            <tbody class="center borderTable">
+                <?php
+                //query ke database SELECT tabel mahasiswa urut berdasarkan id yang paling besar
+                $sql = mysqli_query($koneksi, "SELECT * FROM pemenuhan_komitmen ORDER BY id_pk DESC") or die(mysqli_error($koneksi));
+                //jika query diatas menghasilkan nilai > 0 maka menjalankan script di bawah if...
+                if (mysqli_num_rows($sql) > 0) {
+                    //membuat variabel $no untuk menyimpan nomor urut
+                    $no = 1;
+                    //melakukan perulangan while dengan dari dari query $sql
+                    while ($pk = mysqli_fetch_assoc($sql)) {
+                        // var_dump($pk);
+                        //jika sudah mendapatkan parameter GET id dari URL
+                        include('get_id.php');
+                        // var_dump($pk);
+                        if ($data['id'] == $pk['id_surat']) { ?>
+                            <tr class="textCenter borderTable">
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 2%;"><?= $no ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 24%;"><?= $pk['perizinan_berusaha'] ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 6%;"><?= $pk['pemenuhan_kewajiban'] ?></td>
+                                <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 6%;"><?= $pk['keterangan'] ?></td>
+                            </tr>
+                    <?php
+                            $no++;
+                        }
+                    }
+                    //jika query menghasilkan nilai 0
+                } else { ?>
+                    <tr class="textCenter borderTable">
+                        <td class="borderTable" style="font-size: 9pt; font-family: Arial; width: 2%;" colspan="6">Tidak ada data.</td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+        <table style="width:90%;">
+            <tr class="">
+                <th class="">&nbsp;</th>
+                <th class="">&nbsp;</th>
+                <th class="">&nbsp;</th>
+                <th class="">&nbsp;</th>
+            </tr>
+            <tr class="textCenter ">
+                <td class="">&nbsp;</td>
+                <td class="">&nbsp;</td>
+                <td class="">&nbsp;</td>
+                <td class="">&nbsp;</td>
+            </tr>
+            <tr class="textCenter ">
+                <td class="">&nbsp;</td>
+                <td class="">&nbsp;</td>
+                <td class="">&nbsp;</td>
+                <td class="">&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+
+    <table style="width:93%;  border: 1px solid;">
+        <tr style="height: 1px;">
+            <td style="font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;</td>
             <td style="width: 1px; font-size: 6.5pt; font-family: Arial; font-style: italic;" valign="top ">&nbsp;</td>
             <td rowspan="6" style="width: 1px; font-size: 9pt; font-family: Arial;" valign="top "><img src="img/footer.png" alt="" style="max-width: 140px;"></td>
         </tr>
-        <tr>
+        <tr style="height: 1px;">
             <td style=" font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;&nbsp;1.</td>
             <td style="width: 2500px; font-size: 6.5pt; font-family: Arial; font-style: italic;" valign="top ">&nbsp;&nbsp;Dokumen ini diterbitkan sistem OSS berdasarkan data dari Pelaku Usaha, tersimpan dalam sistem OSS, yang menjadi &nbsp;&nbsp;tanggung jawab Pelaku Usaha.</td>
 
         </tr>
-        <tr>
+        <tr style="height: 1px;">
             <td style=" font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;&nbsp;2.</td>
             <td style="width: 1px; font-size: 6.5pt; font-family: Arial; font-style: italic;" valign="top ">&nbsp;&nbsp;Dalam hal terjadi kekeliruan isi dokumen ini akan dilakukan perbaikan sebagaimana mestinya</td>
         </tr>
-        <tr>
+        <tr style="height: 1px;">
             <td style=" font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;&nbsp;3.</td>
             <td style="width: 1px; font-size: 6.5pt; font-family: Arial; font-style: italic; " valign="top ">&nbsp;&nbsp;Dokumen ini telah ditandatangani secara elektronik menggunakan sertifikat elektronik yang diterbitkan oleh BSrE-BSSN</td>
         </tr>
-        <tr>
+        <tr style="height: 1px;">
             <td style=" font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;&nbsp;4.</td>
             <td style="width: 1px; font-size: 6.5pt; font-family: Arial; font-style: italic;" valign="top ">&nbsp;&nbsp;Data lengkap Perizinan Berusaha dapat diperoleh melalui sistem OSS menggunakan hak akses.</td>
         </tr>
-        <tr>
+        <tr style="height: 1px;">
             <td style=" font-size: 6.5pt; font-family: Arial; width: 1%; font-style: italic;" valign="top ">&nbsp;</td>
             <td style="width: 1px; font-size: 6.5pt; font-family: Arial; font-style: italic;" valign="top ">&nbsp;</td>
         </tr>
     </table>
 
-
-    <script>
-        window.print();
-    </script>
+    <!-- <script>
+      window.print();
+  </script> -->
 </body>
 
 </html>

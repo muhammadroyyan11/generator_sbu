@@ -51,9 +51,11 @@ include('config.php');
 												<td><?= $data['alamat_kantor'] ?>, <?= $data['kd_pos_kantor'] ?></td>
 												<td><?= $data['status'] ?></td>
 												<td><?= $data['lokasi_usaha'] ?>, <?= $data['kd_pos_usaha'] ?></td>
-												<th>
-													<a href="cetak.php?page=print&id=<?= $data['id'] ?>" class="btn btn-circle btn-success btn-sm" target="_blank">Cetak</a>
-												</th>
+												<td>
+
+													<a href="index.php?page=lampiran&id=<?= $data['id'] ?>" class="btn btn-circle btn-danger btn-sm" target="_blank">Lampiran</a>
+													<hr><a href="cetak.php?page=print&id=<?= $data['id'] ?>" class="btn btn-circle btn-success btn-sm" target="_blank">Cetak</a>
+												</td>
 											</tr>
 										<?php
 											$no++;
